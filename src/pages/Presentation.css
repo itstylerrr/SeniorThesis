@@ -1,0 +1,75 @@
+/* Container for the presentation page */
+.presentation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  height: 100vh;
+  background-color: #2b2b2b;
+}
+
+.presentation-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/photos/12123PvMICDS-34.jpg') center/cover no-repeat;
+  z-index: -1;
+}
+
+/* Image container with smooth transitions */
+.image-container {
+  flex: 2;
+  text-align: center;
+}
+
+.presentation-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the image */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for images */
+}
+
+/* Annotation container */
+.annotation-container {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the annotation */
+  border-radius: 10px;
+  margin-left: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow around the annotation box */
+  transition: opacity 1s ease; /* Smooth fade-in for annotation */
+}
+
+.annotation-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.annotation-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Ensures that the layout is responsive */
+@media (max-width: 768px) {
+  .presentation-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .annotation-container {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .presentation-image {
+    max-height: 50vh;
+  }
+}
