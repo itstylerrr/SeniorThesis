@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo"><img src={logo} alt='tjw_logo' height={40}/></div>
+      <div className="logo"> <a href='/'><img src={logo} alt='tjw_logo' height={40}/></a></div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
