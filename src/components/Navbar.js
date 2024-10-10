@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // You'll style this component here.
-import logo from '../assets/logos/tjw_logo.png'
+import logo from '../assets/logos/tjw_logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo"> <a href='/'><img src={logo} alt='tjw_logo' height={40}/></a></div>
+      <div className="logo">
+        <a href="/">
+          <img src={logo} alt="tjw_logo" height={40} />
+        </a>
+      </div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>

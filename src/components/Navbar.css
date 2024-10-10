@@ -1,24 +1,28 @@
-/* Navbar.css */
-
-/* General navbar styling */
+/* Navbar general styling */
 .navbar {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
+  z-index: 10;
   display: flex;
-  justify-content: space-between; /* Space between logo and hamburger */
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 999; /* Ensure it's always on top */
+  padding: 10px 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* No background on larger screens */
+.navbar {
+  background-color: transparent; /* No background */
 }
 
 /* Logo styling */
 .logo img {
   display: block;
-  height: 40px; /* Logo height */
-  transition: transform 0.3s ease;
+  height: 40px;
+  transition: transform 0.3s ease,
 }
 
 .logo img:hover {
@@ -30,7 +34,7 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  z-index: 1000; /* Make sure hamburger is on top of the menu */
+  z-index: 1000;
   padding-right: 40px;
 }
 
@@ -42,7 +46,7 @@
   transition: all 0.3s ease;
 }
 
-/* When hamburger is clicked */
+/* Hamburger open animation */
 .hamburger.open span:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -66,19 +70,23 @@
 
 .nav-menu a {
   text-decoration: none;
-  color: white; /* Default color of the links */
+  color: white;
   font-size: 18px;
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color change */
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+  padding: 8px 0;
 }
 
 .nav-menu a:hover {
-  color: #4b3ae7; /* The color you want when hovering */
-  transform: scale(1.1); /* Slightly enlarges the link */
+  color: #4b3ae7;
+  transform: scale(1.1);
+  border-bottom: 2px solid #4b3ae7;
 }
 
-
+/* Mobile navigation styling */
 .nav-menu.open {
-  display: block; /* Mobile view */
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -93,9 +101,11 @@
     top: 60px;
     right: 0;
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background */
     z-index: 998;
     padding-right: 40px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Slight shadow for dropdown */
   }
 
   .nav-menu.open {
@@ -103,10 +113,38 @@
     align-items: center;
     padding: 10px 0;
     padding-right: 40px;
+    animation: fadeIn 0.3s ease;
   }
 
   .nav-menu a {
     margin: 15px 0;
     font-size: 1.5rem;
   }
+}
+
+/* Animation for mobile nav fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add smooth hover effects for nav links */
+.nav-menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4b3ae7;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-menu a:hover::before {
+  transform: scaleX(1); /* Animates underline effect */
 }
