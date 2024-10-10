@@ -4,6 +4,7 @@ import img1 from '../assets/photos/12123PvMICDS-34.jpg';
 import img2 from '../assets/photos/22424_DistrictChamps-69.jpg';
 import img3 from '../assets/photos/82024_PvJ-15.jpg';
 import img4 from '../assets/photos/22424_DistrictChamps-08.jpg'
+import img5 from '../assets/photos/2224PvS-21.jpg';
 import annotation from '../components/Annotations.json';
 
 // Image array with annotations
@@ -11,7 +12,8 @@ const images = [
   { src: img1, alt: annotation.images.img1.name, annotation: annotation.images.img1.annotation, link: annotation.images.img1.link },
   { src: img2, alt: annotation.images.img2.name, annotation: annotation.images.img2.annotation, link: annotation.images.img2.link },
   { src: img3, alt: annotation.images.img3.name, annotation: annotation.images.img3.annotation, link: annotation.images.img3.link },
-  { src: img4, alt: annotation.images.img4.name, annotation: annotation.images.img4.annotation },
+  { src: img4, alt: annotation.images.img4.name, annotation: annotation.images.img4.annotation, link: annotation.images.img5.link },
+  { src: img5, alt: annotation.images.img5.name, annotation: annotation.images.img5.annotation, link: annotation.images.img5.link },
 ];
 
 const Presentation = () => {
