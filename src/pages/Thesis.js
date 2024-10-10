@@ -5,6 +5,7 @@ import img2 from '../assets/photos/22424_DistrictChamps-69.jpg';
 import img3 from '../assets/photos/82024_PvJ-15.jpg';
 import img4 from '../assets/photos/22424_DistrictChamps-08.jpg';
 import img5 from '../assets/photos/2224PvS-21.jpg';
+import img6 from '../assets/photos/12023_MonkNight_06.jpg';
 import annotation from '../components/Annotations.json';
 
 const Thesis = () => {
@@ -19,6 +20,7 @@ const Thesis = () => {
     { src: img3, alt: annotation.images.img3.name, annotation: annotation.images.img3.annotation },
     { src: img4, alt: annotation.images.img4.name, annotation: annotation.images.img4.annotation },
     { src: img5, alt: annotation.images.img5.name, annotation: annotation.images.img5.annotation },
+    { src: img6, alt: annotation.images.img6.name, annotation: annotation.images.img6.annotation },
   ];
 
   const openModal = (image) => {
