@@ -1,0 +1,135 @@
+/* Not Found Container */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Animated Face */
+.face {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+  background-color: #0078ff;
+  border-radius: 50%;
+  animation: grow 3s infinite ease-in-out;
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 40%;
+  animation: blink 5s infinite ease-in-out;
+}
+
+.left-eye {
+  left: 30px;
+}
+
+.right-eye {
+  right: 30px;
+}
+
+/* Dynamic Mouth */
+/* Dynamic Mouth */
+.mouth {
+  position: absolute;
+  bottom: 25px; /* Adjust this to position the mouth relative to the face */
+  left: 45px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  border-radius: 50%; /* Default smile shape */
+}
+
+/* Text */
+.error-title {
+  font-size: 5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* Animated Button */
+.back-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0078ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: float 2s infinite ease-in-out, pulse 1.5s infinite ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+  background-color: #005fcc;
+}
+
+/* Animations */
+
+/* Face Growing Animation */
+@keyframes grow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Eye Blinking Animation */
+@keyframes blink {
+  0%,
+  90%,
+  100% {
+    height: 20px;
+  }
+  95% {
+    height: 2px;
+  }
+}
+
+/* Button Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Button Pulse Animation */
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+}
