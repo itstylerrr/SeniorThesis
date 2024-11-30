@@ -1,0 +1,186 @@
+.thesis-container {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #f9f9f9;
+}
+
+.thesis-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darken effect */
+  backdrop-filter: blur(5px); /* Apply blur */
+  z-index: 0; /* Ensure it sits behind all content */
+}
+
+/* Thesis Section */
+.thesis-section {
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Image Container */
+.main-image-container {
+  position: relative;
+  text-align: center;
+  max-width: 80%; /* Restrict the size of the main image container */
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* Restrict maximum width */
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.main-image-container:hover .main-image {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Floating Button */
+.floating-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #0078ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  animation: jump 1.5s ease-in-out infinite; /* Apply jump animation */
+}
+
+.floating-button:hover {
+  background-color: #005fcc;
+}
+
+/* Jump Animation */
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0); /* Start and end at the same position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up slightly */
+  }
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.5rem;
+  font-family: Vonique, serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+  color: #ffffff;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
+}
+
+/* Gallery Slider */
+.gallery-slider {
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  max-width: 90%; /* Ensure gallery aligns with the main image size */
+}
+
+.gallery-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  max-width: 150px; /* Smaller images for gallery */
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  animation: slideIn 0.4s ease;
+}
+
+.modal-content p {
+  margin: 0 0 1.5rem;
+  color: #333;
+}
+
+.close-button {
+  padding: 0.5rem 1rem;
+  background-color: #0078ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #005fcc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

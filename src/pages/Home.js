@@ -1,31 +1,62 @@
-import React, { useEffect } from 'react';
-import './Home.css';
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
+import "../styles/Home.css";
 
-const images = [
-  '../assets/photos/111323PvC-66.jpg',
-  '../assets/photos/12123PvMICDS-34.jpg',
-  '../assets/photos/22424_DistrictChamps-69.jpg',
-  '../assets/photos/82024_PvJ-15.jpg',
-  '../assets/photos/91424_PvLUSO-02.jpg',
-  // Add all other image paths here
+const categories = [
+  { title: "DETERMINATION", image: "/images/determination.jpg" },
+  { title: "EXCITEMENT", image: "/images/excitement.jpg" },
+  { title: "TEAMWORK", image: "/images/teamwork.jpg" },
+  { title: "VICTORY & DEFEAT", image: "/images/victory-defeat.jpg" },
+  { title: "FAVORITES", image: "/images/favorites.jpg" },
 ];
 
 const Home = () => {
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
-  useEffect(() => {
-    images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
+  const handleSwiperChange = (swiper) => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
 
   return (
-    <div className="home">
-      <div className="overlay"></div>
-      <div className="content">
-        <h1>Tyler Witkowski - Senior Thesis</h1>
-        <p><em>Capturing emotion in photography</em></p>
-      </div>
+    <div className="home-slider">
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
+        }}
+        autoplay={{
+          delay: 7000,
+          disableOnInteraction: false,
+        }}
+        onSlideChange={(swiper) => handleSwiperChange(swiper)}
+        onInit={(swiper) => handleSwiperChange(swiper)} // To set initial state
+        className="home-swiper"
+      >
+        {categories.map((category, index) => (
+          <SwiperSlide key={index} className="home-slide">
+            <div
+              className="home-slide-image"
+              style={{ backgroundImage: `url(${category.image})` }}
+            >
+              <h2 className="home-slide-title">{category.title}</h2>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* Custom navigation buttons */}
+      <div
+        className={`custom-prev ${isBeginning ? "disabled" : ""}`}
+      ></div>
+      <div
+        className={`custom-next ${isEnd ? "disabled" : ""}`}
+      ></div>
     </div>
   );
 };

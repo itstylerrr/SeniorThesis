@@ -1,67 +1,74 @@
-import React, { useState } from 'react';
-import './Thesis.css';
-import img1 from '../assets/photos/12123PvMICDS-34.jpg';
-import img2 from '../assets/photos/22424_DistrictChamps-69.jpg';
-import img3 from '../assets/photos/82024_PvJ-15.jpg';
-import img4 from '../assets/photos/22424_DistrictChamps-08.jpg';
-import img5 from '../assets/photos/2224PvS-21.jpg';
-import img6 from '../assets/photos/12023_MonkNight_06.jpg';
-import img7 from '../assets/photos/11124PvN-06.jpg';
-import img8 from '../assets/photos/11124PvN-18.jpg';
-import img9 from '../assets/photos/41024PvLN-23.jpg';
-import annotation from '../components/Annotations.json';
+import React, { useState } from "react";
+import thesisSections from "../assets/thesisData";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import "../styles/Thesis.css";
 
 const Thesis = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [modalImageSrc, setModalImageSrc] = useState('');
-  const [annotationText, setAnnotationText] = useState('');
-  const [isModalOpening, setIsModalOpening] = useState(false); // New state for opening animation
+  const [modalContent, setModalContent] = useState(null);
 
-  const images = [
-    { src: img1, alt: annotation.images.img1.name, annotation: annotation.images.img1.annotation },
-    { src: img2, alt: annotation.images.img2.name, annotation: annotation.images.img2.annotation },
-    { src: img3, alt: annotation.images.img3.name, annotation: annotation.images.img3.annotation },
-    { src: img4, alt: annotation.images.img4.name, annotation: annotation.images.img4.annotation },
-    { src: img5, alt: annotation.images.img5.name, annotation: annotation.images.img5.annotation },
-    { src: img6, alt: annotation.images.img6.name, annotation: annotation.images.img6.annotation },
-    { src: img7, alt: annotation.images.img7.name, annotation: annotation.images.img7.annotation },
-    { src: img8, alt: annotation.images.img8.name, annotation: annotation.images.img8.annotation },
-    { src: img9, alt: annotation.images.img9.name, annotation: annotation.images.img9.annotation },
-  ];
-
-  const openModal = (image) => {
-    setModalImageSrc(image.src);
-    setAnnotationText(image.annotation);
-    setModalVisible(true);
-    setIsModalOpening(true); // Trigger the opening animation
+  const openModal = (annotation) => {
+    setModalContent(annotation);
   };
 
   const closeModal = () => {
-    setIsModalOpening(false); // First, start the closing animation
-    setTimeout(() => setModalVisible(false), 300); // Delay hiding to allow the close animation
+    setModalContent(null);
   };
 
   return (
-    <div className="gallery-container">
-      <div className="overlay"></div>
-      {/* Grid of images */}
-      <div className="image-grid">
-        {images.map((image, index) => (
-          <div key={index} className="image-item" onClick={() => openModal(image)}>
-            <img src={image.src} alt={`${image.alt}`} className="gallery-image" />
+    <div className="thesis-container">
+      {thesisSections.map((section, index) => (
+        <div className="thesis-section" key={index}>
+          {/* Main Image with Floating Button */}
+          <div className="main-image-container">
+            <img
+              src={section.mainImage}
+              alt={section.title}
+              className="main-image"
+            />
+            <button
+              className="floating-button"
+              onClick={() => openModal(section.annotation)}
+            >
+              📝
+            </button>
           </div>
-        ))}
-      </div>
 
-      {/* Modal for enlarging images */}
-      {modalVisible && (
-        <div
-          id="image-modal"
-          className={`modal ${isModalOpening ? 'modal-open' : 'modal-close'}`} // Apply the open/close class
-        >
-          <span className="close" onClick={closeModal}>&times;</span>
-          <img className="modal-content" id="modal-image" src={modalImageSrc} alt="Enlarged" />
-          <div id="image-annotation" className="annotation-text">{annotationText}</div>
+          {/* Section Title */}
+          <h2 className="section-title">{section.title}</h2>
+
+          {/* Gallery Slider */}
+          <Swiper
+            navigation={true}
+            spaceBetween={10}
+            slidesPerView={3}
+            modules={[Navigation]}
+            className="gallery-slider"
+          >
+            {section.gallery.map((image, imgIndex) => (
+              <SwiperSlide key={imgIndex}>
+                <img
+                  src={image}
+                  alt={`${section.title} ${imgIndex + 1}`}
+                  className="gallery-image"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      ))}
+
+      {/* Modal */}
+      {modalContent && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <p>{modalContent}</p>
+            <button className="close-button" onClick={closeModal}>
+              Close
+            </button>
+          </div>
         </div>
       )}
     </div>

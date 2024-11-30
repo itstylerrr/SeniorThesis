@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import './Navbar.css'; // You'll style this component here.
-import logo from '../assets/logos/tjw_logo.png';
+import React, { useState } from "react";
+import "../styles/Navbar.css";
+import logo from "../assets/tjw_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,23 +10,38 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <a href="/">
-          <img src={logo} alt="tjw_logo" height={40} />
-        </a>
+    <div className="navbar">
+      {/* Hamburger Icon */}
+      <div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+
+      {/* Fullscreen Menu */}
+      <div className={`menu-overlay ${isOpen ? "open" : ""}`}>
+        {/* Logo */}
+        <div className={`menu-logo ${isOpen ? "animate" : ""}`}>
+          <img src={logo} alt="Logo" />
+        </div>
+
+        {/* Menu Items */}
+        <ul className="menu-items">
+          <li onClick={toggleMenu}>
+            <a href="/">Home</a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a href="/thesis">Thesis</a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a href="/about">About</a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
       </div>
-      <div className={`nav-menu ${isOpen ? 'open' : ''}`}>
-        <a href="/">Home</a>
-        <a href="/thesis">Thesis</a>
-        <a href="/presentation">Presentation</a>
-      </div>
-    </nav>
+    </div>
   );
 };
 
