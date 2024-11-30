@@ -1,66 +1,67 @@
 /* Overall slider container */
 .home-slider {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Swiper container */
-  .home-swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Individual slide */
-  .home-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .home-slide-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  /* Centered title */
-  .home-slide-title {
-    font-size: 15vh;
-    font-weight: bold;
-    font-family: Vonique, serif;
-    letter-spacing: 5px;
-    color: #fff;
-    text-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
-    z-index: 2;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Swiper container */
+.home-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual slide */
+.home-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.home-slide-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Centered title */
+.home-slide-title {
+  font-size: 10vw; /* Dynamically scale text size */
+  font-weight: bold;
+  font-family: Vonique, serif;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  text-align: center; /* Ensure proper alignment on smaller screens */
+}
+
+/* Title animation */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    transform: translateY(20px);
   }
-  
-  /* Title animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
 /* Custom navigation button styles */
 .custom-prev,
 .custom-next {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border: 2px dashed white;
   border-radius: 50%;
   display: flex;
@@ -77,20 +78,20 @@
 
 /* Positioning */
 .custom-prev {
-  left: 20px;
+  left: 15px; /* Adjusted for smaller screens */
 }
 
 .custom-next {
-  right: 20px;
+  right: 15px; /* Adjusted for smaller screens */
 }
 
 /* Arrow inside the navigation buttons */
 .custom-prev::before,
 .custom-next::before {
-  content: '';
+  content: "";
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border-top: 2px solid white;
   border-right: 2px solid white;
   transform: rotate(225deg);
@@ -113,7 +114,12 @@
 .custom-prev:not(.disabled):hover,
 .custom-next:not(.disabled):hover {
   transform: translateY(-50%) scale(1.2); /* Bigger zoom effect on hover */
-  background-color: rgba(255, 255, 255, 0.2); /* Add a subtle background on hover */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Add a subtle background on hover */
 }
 
 .custom-prev:not(.disabled):hover::before {
@@ -129,10 +135,10 @@
 /* Cool button hover animation */
 .custom-prev:not(.disabled):hover::after,
 .custom-next:not(.disabled):hover::after {
-  content: '';
+  content: "";
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border: 2px dashed rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   animation: pulse 0.6s ease-out infinite;
@@ -150,4 +156,54 @@
   }
 }
 
-  
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Reduce button size and adjust positioning */
+  .custom-prev,
+  .custom-next {
+    width: 40px;
+    height: 40px;
+    top: 60%; /* Move buttons lower on mobile for better access */
+  }
+
+  .custom-prev {
+    left: 10px;
+  }
+
+  .custom-next {
+    right: 10px;
+  }
+
+  .custom-prev::before,
+  .custom-next::before {
+    width: 10px;
+    height: 10px;
+    border-top: 1.5px solid white;
+    border-right: 1.5px solid white;
+  }
+
+  /* Scale text size for smaller screens */
+  .home-slide-title {
+    font-size: 7vw; /* Dynamically smaller text for mobile */
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-prev,
+  .custom-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .custom-prev::before,
+  .custom-next::before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .home-slide-title {
+    font-size: 8vw;
+    letter-spacing: 1.5px;
+  }
+}
