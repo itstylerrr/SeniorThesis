@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/NotFound.css";
 
 const NotFound = () => {
   const navigate = useNavigate();
   const [happiness, setHappiness] = useState(50); // Initial happiness level
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 }); // Cursor position
 
+  // Handle mouse movement to update happiness and cursor position
   const handleMouseMove = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+
     const button = document.querySelector(".back-button");
     if (!button) return;
 
@@ -31,12 +35,41 @@ const NotFound = () => {
     setHappiness(newHappiness);
   };
 
+  // Handle automatic blinking every 5 seconds
+  const [isBlinking, setIsBlinking] = useState(false);
+  useEffect(() => {
+    const blinkInterval = setInterval(() => {
+      setIsBlinking(true);
+      setTimeout(() => setIsBlinking(false), 200); // Blink duration
+    }, 5000);
+
+    return () => clearInterval(blinkInterval); // Cleanup interval
+  }, []);
+
   return (
     <div className="not-found-container" onMouseMove={handleMouseMove}>
       {/* Animated Dynamic Face */}
       <div className="face">
-        <div className="eye left-eye"></div>
-        <div className="eye right-eye"></div>
+        <div className={`eye left-eye ${isBlinking ? "blink" : ""}`}>
+          <div
+            className="pupil"
+            style={{
+              transform: `translate(${
+                (cursorPosition.x - window.innerWidth / 2) / 50
+              }px, ${(cursorPosition.y - window.innerHeight / 2) / 50}px)`,
+            }}
+          ></div>
+        </div>
+        <div className={`eye right-eye ${isBlinking ? "blink" : ""}`}>
+          <div
+            className="pupil"
+            style={{
+              transform: `translate(${
+                (cursorPosition.x - window.innerWidth / 2) / 50
+              }px, ${(cursorPosition.y - window.innerHeight / 2) / 50}px)`,
+            }}
+          ></div>
+        </div>
         <div
           className="mouth"
           style={{

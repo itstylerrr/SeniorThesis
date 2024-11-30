@@ -7,14 +7,17 @@ import { Navigation } from "swiper/modules";
 import "../styles/Thesis.css";
 
 const Thesis = () => {
-  const [modalContent, setModalContent] = useState(null);
+  const [modalContent, setModalContent] = useState(null); // Content for modal
+  const [modalImage, setModalImage] = useState(null); // Image for modal
 
-  const openModal = (annotation) => {
+  const openModal = (annotation, image = null) => {
     setModalContent(annotation);
+    setModalImage(image);
   };
 
   const closeModal = () => {
     setModalContent(null);
+    setModalImage(null);
   };
 
   return (
@@ -53,6 +56,9 @@ const Thesis = () => {
                   src={image}
                   alt={`${section.title} ${imgIndex + 1}`}
                   className="gallery-image"
+                  onClick={() =>
+                    openModal(section.galleryAnnotations[imgIndex], image)
+                  }
                 />
               </SwiperSlide>
             ))}
@@ -64,6 +70,9 @@ const Thesis = () => {
       {modalContent && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            {modalImage && (
+              <img src={modalImage} alt="Modal" className="modal-image" />
+            )}
             <p>{modalContent}</p>
             <button className="close-button" onClick={closeModal}>
               Close

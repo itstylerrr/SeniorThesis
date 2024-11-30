@@ -7,6 +7,11 @@ const thesisSections = [
       "/images/determination-2.jpg",
       "/images/determination-3.jpg",
     ],
+    galleryAnnotations: [
+      "Annotation for Image 1",
+      "Annotation for Image 2",
+      "Annotation for Image 3",
+    ],
     annotation: "Annotation for Determination will go here.",
   },
   {
@@ -27,6 +32,11 @@ const thesisSections = [
       "/images/teamwork-2.jpg",
       "/images/teamwork-3.jpg",
     ],
+    galleryAnnotations: [
+      "Annotation for Image 1",
+      "Annotation for Image 2",
+      "Annotation for Image 3",
+    ],
     annotation: "Annotation for Teamwork will go here.",
   },
   {
@@ -37,6 +47,11 @@ const thesisSections = [
       "/images/victory-defeat-2.jpg",
       "/images/victory-defeat-3.jpg",
     ],
+    galleryAnnotations: [
+      "Annotation for Image 1",
+      "Annotation for Image 2",
+      "Annotation for Image 3",
+    ],
     annotation: "Annotation for Victory & Defeat will go here.",
   },
   {
@@ -46,6 +61,11 @@ const thesisSections = [
       "/images/favorites-1.jpg",
       "/images/favorites-2.jpg",
       "/images/favorites-3.jpg",
+    ],
+    galleryAnnotations: [
+      "Annotation for Image 1",
+      "Annotation for Image 2",
+      "Annotation for Image 3",
     ],
     annotation: "Annotation for Favorites will go here.",
   },
