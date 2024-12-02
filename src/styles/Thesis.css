@@ -69,6 +69,17 @@
   animation: jump 1.5s ease-in-out infinite; /* Apply jump animation */
 }
 
+/* Jump Animation */
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0); /* Start and end at the same position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up slightly */
+  }
+}
+
 .floating-button:hover {
   transform: scale(1.1);
   background-color: #005fcc;
