@@ -9,7 +9,7 @@ const thesisSections = [
     ],
     galleryAnnotations: [
       "In a Priory Varsity Hockey game against Ladue on November 22nd, 2024, Junior Freddy Gaertner handles the puck through the Ladue defense. That is until he was tripped by a Ladue player who is out of frame. Even after being tripped, seemingly floating in the air, still has his eyes focused on moving forward. To capture this shot, I made sure my camera was shooting at a high shutter speed to freeze the action, specifically, it was at 1/800s!",
-      "Annotation for Image 2",
+      "Quite possibly one of my favorite photos that I have ever taken depicts Junior Nate Sutto, a goalie, has his eyes locked on to the falling puck in a puck-drop between Priory's number 76, JP Nadero, and Clayton's number 12. This picture was taken back on November 11, 2023, and even though I didn't study sports photography as I do now, I was able to capture one of the best shots of the year. What makes this picture so great from a technical perspective is most importantly the framing of the image. To make this picture great, I made sure that Nate was positioned in the middle of the frame (though the rule of thirds was not followed, I believe that it should be except in this particular photo) and in the foreground, blurred, are the two players going head to head.",
       "Annotation for Image 3",
     ],
     annotation:
