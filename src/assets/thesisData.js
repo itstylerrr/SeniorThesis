@@ -23,6 +23,11 @@ const thesisSections = [
       "/images/excitement-2.jpg",
       "/images/excitement-3.jpg",
     ],
+    galleryAnnotations: [
+      "Annotation for Image 1",
+      "Annotation for Image 2",
+      "Annotation for Image 3",
+    ],
     annotation:
       "Quite possibly one of my favorite categories to get a picture of is excitement. Immediately after checking my camera once an exciting moment happens in a game, I am very quickly able to tell if it will be great. A picture that embodies excitement should show the athletes (and/or his teams) pure joy after scoring a goal or making a good shot. One of the most important aspects of being able to make a good picture great is to capture the emotion in the moment. In this section, you will find a selection of some of my favorite photographs featuring Priory athletes, each highlighting their pure joy in the sports they play. These images encapsulate the moments that mean so much to the athletes and the fans themselves. To dive deeper into the story behind each smaller image, simply click on the image itself for annotations and insights on what makes each shot unique and meaningful. I hope you enjoy viewing these moments as much as I enjoyed capturing them!",
   },
