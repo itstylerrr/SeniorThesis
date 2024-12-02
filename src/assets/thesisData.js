@@ -71,7 +71,7 @@ const thesisSections = [
     ],
     galleryAnnotations: [
       "Annotation for Image 1",
-      "Annotation for Image 2",
+      "While this image may not be one of my best, matter of fact, it isn't even of a Priory sporting event. However, I want to include this image on this website because it tells a story of a life that was taken way too early. Seen jumping into the arms of his teammate, number 72, Colin Brown - a Junior at CBC who plays as number 3 on their hockey team, but number 72 on his club team (pictured) the Affton Americans. While I did not know Colin, I came to the game excited to take pictures at a high-level club hockey game with Max Nadaud '26, who was injured and sat with me the entire game. He told me a lot about his team, but specifically about number 72, who they had nicknamed Brownie. Just a week later, Colin Brown was hit by a stray bullet while leaving one of his hockey games, and a few days later succumbed to his injuries. May Colin Brown rest in peace. ❤️🤍💙/💜💛",
       "Annotation for Image 3",
     ],
     annotation: "Annotation for Favorites will go here.",
