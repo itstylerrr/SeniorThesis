@@ -24,7 +24,7 @@ const thesisSections = [
       "/images/excitement-3.jpg",
     ],
     galleryAnnotations: [
-      "Annotation for Image 1",
+      "This photograph almost perfectly captures the essence of excitement in sports. Taken on November 25, 2024, during a Priory Varsity Hockey game against Fort Zumwalt West, Freddy Gaertner '26 leaps into the glass in celebration after scoring a pivotal goal. Surrounding him, Priory fans erupt in cheers, their energy and passion mirroring Gaertner's joy. To the left, teammate Auggie Werner '27 skates in, celebrating alongside him and adding a layer of camaraderie to the image. What makes this photo remarkable to me is the raw emotion from both the players and the most noticeable, the crowd. I ensured my camera settings were optimized to capture the high-intensity action—using a fast shutter speed of 1/800s to freeze Gaertner mid-air and highlight the dynamic interaction between the athlete and his ecstatic supporters.",
       "Annotation for Image 2",
       "Annotation for Image 3",
     ],
