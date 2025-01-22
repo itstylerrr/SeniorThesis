@@ -9,7 +9,7 @@ const categories = [
   { title: "DETERMINATION", image: "/images/determination.jpg" },
   { title: "EXCITEMENT", image: "/images/excitement.jpg" },
   { title: "TEAMWORK", image: "/images/teamwork.jpg" },
-  { title: "VICTORY & DEFEAT", image: "/images/victory-defeat.jpg" },
+  { title: "VICTORY", image: "/images/victory-defeat.jpg" },
   { title: "FAVORITES", image: "/images/favorites.jpg" },
 ];
 
@@ -51,12 +51,8 @@ const Home = () => {
       </Swiper>
 
       {/* Custom navigation buttons */}
-      <div
-        className={`custom-prev ${isBeginning ? "disabled" : ""}`}
-      ></div>
-      <div
-        className={`custom-next ${isEnd ? "disabled" : ""}`}
-      ></div>
+      <div className={`custom-prev ${isBeginning ? "disabled" : ""}`}></div>
+      <div className={`custom-next ${isEnd ? "disabled" : ""}`}></div>
     </div>
   );
 };

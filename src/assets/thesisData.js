@@ -48,7 +48,7 @@ const thesisSections = [
       "To have a great team, you can't just have great players; you need strong team chemistry as well. Capturing these moments is incredibly meaningful to both myself and the players alike. In this picture, we see Max Nadaud '26 skating over to the ecstatic fans in celebration of a game-winning goal on December 1, 2023, against MICDS. Following Max are all his teammates on the ice at the time, each of whom contributed in their own way to assisting him in scoring the goal.",
   },
   {
-    title: "victory & defeat",
+    title: "victory",
     mainImage: "/images/victory-defeat.jpg",
     gallery: [
       "/images/victory-defeat-1.jpg",
@@ -60,7 +60,7 @@ const thesisSections = [
       "Annotation for Image 2",
       "Annotation for Image 3",
     ],
-    annotation: "Annotation for Victory & Defeat will go here.",
+    annotation: "Annotation for Victory will go here.",
   },
   {
     title: "favorites",
