@@ -40,11 +40,12 @@ const thesisSections = [
       "/images/teamwork-3.jpg",
     ],
     galleryAnnotations: [
-      "Annotation for Image 1",
+      "In a thriller of a game on April 14, 2023, against CBC, the Ravens played an extremely close match, with each team trading goals back and forth. In this picture, Jack Parent '25 has just finished a dodge down the right alley and is passing the ball over to Mick Murphy '25, who is cutting toward him for a shot. The best technical aspect of this picture is how the ball is frozen mid-flight, showing the pass on its way to Mick. However, as this was only my second year of photography, I didn't quite understand many of the technical aspects of the craft. If I were to take this picture again, I would make sure that all the athletes' limbs are in frame or fully commit to an upper-body shot. Additionally, the rule of thirds is not being followed, so I would adjust the framing to improve the composition.",
       "Annotation for Image 2",
       "Annotation for Image 3",
     ],
-    annotation: "Annotation for Teamwork will go here.",
+    annotation:
+      "To have a great team, you can't just have great players; you need strong team chemistry as well. Capturing these moments is incredibly meaningful to both myself and the players alike. In this picture, we see Max Nadaud '26 skating over to the ecstatic fans in celebration of a game-winning goal on December 1, 2023, against MICDS. Following Max are all his teammates on the ice at the time, each of whom contributed in their own way to assisting him in scoring the goal.",
   },
   {
     title: "victory & defeat",
