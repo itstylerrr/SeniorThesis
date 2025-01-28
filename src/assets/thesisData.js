@@ -49,11 +49,11 @@ const thesisSections = [
   },
   {
     title: "victory",
-    mainImage: "/images/victory-defeat.jpg",
+    mainImage: "/images/victory.jpg",
     gallery: [
-      "/images/victory-defeat-1.jpg",
-      "/images/victory-defeat-2.jpg",
-      "/images/victory-defeat-3.jpg",
+      "/images/victory-1.jpg",
+      "/images/victory-2.jpg",
+      "/images/victory-3.jpg",
     ],
     galleryAnnotations: [
       "After I rolled my ankle the day before, I asked my coach if it would be alright if I could take pictures during the game as the trainer said I was unable to play in order to let my injury heal. After he agreed, I was extremely happy as I have never gotten to take soccer pictures for a team that I play on! I also have never really taken soccer photography besides some work I did at STL SC for a article. Around the start of the game, the sun was still out, and providing a significant amount of light allowing for really nice pictures; however, near the end of the game the sun went down VERY fast and I had to make quick adjustments to allow the photos to turn out well. After the game concluded and the Priory Ravens ended up winning, the team walked over to the fans who stayed and supported the team throughout the game. To capture this moment of victory, I turned down my shutter speed to allow the ISO to go lower and create a less grainy picture. I was able to lower my shutter speed as the athletes were not moving fast, but rather just walking over to the fans. - Camera Settings: ISO 4500 60mm f/4.5 1/640sec",
@@ -64,19 +64,19 @@ const thesisSections = [
       "Ah yes, victory! Every athletes favorite part of the sport. Along with this, it is one of my favorite categories to capture. This is because the attitude in the venue just is overwhelmed with excitement, pride, and joy. To capture this, I have created with a tradition with the hockey team this year where after every win, I hop on the ice and capture a picture of the team holding up a 'W' with their hands. In this section, you will find a selection of some of my favorite photographs featuring Priory athletes in their winningest moments. These images capture the moments that mean so much to the athletes and the fans themselves. To dive deeper into the story behind each smaller image, simply click on the image itself for annotations and insights on what makes each shot unique and meaningful. I hope you enjoy viewing these moments as much as I enjoyed capturing them!",
   },
   {
-    title: "favorites",
-    mainImage: "/images/favorites.jpg",
+    title: "leadership",
+    mainImage: "/images/leadership.jpg",
     gallery: [
-      "/images/favorites-1.jpg",
-      "/images/favorites-2.jpg",
-      "/images/favorites-3.jpg",
+      "/images/leadership-1.jpg",
+      "/images/leadership-2.jpg",
+      "/images/leadership-3.jpg",
     ],
     galleryAnnotations: [
       "Annotation for Image 1",
       "While this image may not be one of my best, matter of fact, it isn't even of a Priory sporting event. However, I want to include this image on this website because it tells a story of a life that was taken way too early. Seen jumping into the arms of his teammate, number 72, Colin Brown - a Junior at CBC who plays as number 3 on their hockey team, but number 72 on his club team (pictured) the Affton Americans. While I did not know Colin, I came to the game excited to take pictures at a high-level club hockey game with Max Nadaud '26, who was injured and sat with me the entire game. He told me a lot about his team, but specifically about number 72, who they had nicknamed Brownie. Just a week later, Colin Brown was hit by a stray bullet while leaving one of his hockey games, and a few days later succumbed to his injuries. May Colin Brown rest in peace. ❤️🤍💙/💜💛",
       "Annotation for Image 3",
     ],
-    annotation: "Annotation for Favorites will go here.",
+    annotation: "Annotation for leadership will go here.",
   },
 ];
 

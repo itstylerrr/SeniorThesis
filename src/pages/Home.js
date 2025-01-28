@@ -9,8 +9,8 @@ const categories = [
   { title: "DETERMINATION", image: "/images/determination.jpg" },
   { title: "EXCITEMENT", image: "/images/excitement.jpg" },
   { title: "TEAMWORK", image: "/images/teamwork.jpg" },
-  { title: "VICTORY", image: "/images/victory-defeat.jpg" },
-  { title: "FAVORITES", image: "/images/favorites.jpg" },
+  { title: "VICTORY", image: "/images/victory.jpg" },
+  { title: "LEADERSHIP", image: "/images/leadership.jpg" },
 ];
 
 const Home = () => {
