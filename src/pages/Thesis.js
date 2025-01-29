@@ -46,7 +46,7 @@ const Thesis = () => {
           <Swiper
             navigation={true}
             spaceBetween={10}
-            slidesPerView={3}
+            slidesPerView={5}
             modules={[Navigation]}
             className="gallery-slider"
           >
