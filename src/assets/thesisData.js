@@ -7,6 +7,7 @@ const thesisSections = [
       "/images/determination-2.jpg",
       "/images/determination-3.jpg",
       "/images/determination-4.jpg",
+      "/images/determination-5.jpg",
     ],
     galleryAnnotations: [
       "In a Priory Varsity Hockey game against Ladue on November 22nd, 2024, Freddy Gaertner '26 handles the puck through the Ladue defense. That is until he was tripped by a Ladue player who is out of frame. Even after being tripped, seemingly floating in the air, still has his eyes focused on moving forward. To capture this shot, I made sure my camera was shooting at a high shutter speed to freeze the action, specifically, it was at 1/800s!",
@@ -25,6 +26,7 @@ const thesisSections = [
       "/images/excitement-2.jpg",
       "/images/excitement-3.jpg",
       "/images/excitement-4.jpg",
+      "/images/excitement-5.jpg",
     ],
     galleryAnnotations: [
       "This photograph almost perfectly captures the essence of excitement in sports. Taken on November 25, 2024, during a Priory Varsity Hockey game against Fort Zumwalt West, Freddy Gaertner '26 leaps into the glass in celebration after scoring a pivotal goal. Surrounding him, Priory fans erupt in cheers, their energy and passion mirroring Gaertner's joy. To the left, teammate Auggie Werner '27 skates in, celebrating alongside him and adding a layer of camaraderie to the image. What makes this photo remarkable to me is the raw emotion from both the players and the most noticeable, the crowd. I ensured my camera settings were optimized to capture the high-intensity action—using a fast shutter speed of 1/800s to freeze Gaertner mid-air and highlight the dynamic interaction between the athlete and his ecstatic supporters.",
@@ -43,6 +45,7 @@ const thesisSections = [
       "/images/teamwork-2.jpg",
       "/images/teamwork-3.jpg",
       "/images/teamwork-4.jpg",
+      "/images/teamwork-5.jpg",
     ],
     galleryAnnotations: [
       "In a thriller of a game on April 14, 2023, against CBC, the Ravens played an extremely close match, with each team trading goals back and forth. In this picture, Jack Parent '25 has just finished a dodge down the right alley and is passing the ball over to Mick Murphy '25, who is cutting toward him for a shot. The best technical aspect of this picture is how the ball is frozen mid-flight, showing the pass on its way to Mick. However, as this was only my second year of photography, I didn't quite understand many of the technical aspects of the craft. If I were to take this picture again, I would make sure that all the athletes' limbs are in frame or fully commit to an upper-body shot. Additionally, the rule of thirds is not being followed, so I would adjust the framing to improve the composition.",
@@ -61,6 +64,7 @@ const thesisSections = [
       "/images/victory-2.jpg",
       "/images/victory-3.jpg",
       "/images/victory-4.jpg",
+      "/images/victory-5.jpg",
     ],
     galleryAnnotations: [
       "After I rolled my ankle the day before, I asked my coach if it would be alright if I could take pictures during the game as the trainer said I was unable to play in order to let my injury heal. After he agreed, I was extremely happy as I have never gotten to take soccer pictures for a team that I play on! I also have never really taken soccer photography besides some work I did at STL SC for a article. Around the start of the game, the sun was still out, and providing a significant amount of light allowing for really nice pictures; however, near the end of the game the sun went down VERY fast and I had to make quick adjustments to allow the photos to turn out well. After the game concluded and the Priory Ravens ended up winning, the team walked over to the fans who stayed and supported the team throughout the game. To capture this moment of victory, I turned down my shutter speed to allow the ISO to go lower and create a less grainy picture. I was able to lower my shutter speed as the athletes were not moving fast, but rather just walking over to the fans. - Camera Settings: ISO 4500 60mm f/4.5 1/640sec",
@@ -79,6 +83,7 @@ const thesisSections = [
       "/images/leadership-2.jpg",
       "/images/leadership-3.jpg",
       "/images/leadership-4.jpg",
+      "/images/leadership-5.jpg",
     ],
     galleryAnnotations: [
       "Even though this isn't a sports photography image, I believe it captures an image of one Jimmy Holmes, a Priory Alumni, All-American, and now an assistant coach for the Priory Varsity Soccer team. Coach Holmes is a role model to all of us on the soccer team, he is a figure of leadership during hard workouts or difficult times during games. He is always pushing us to be the best versions of ourselves that we can be. For example, on the last Sunday before the beginning of the season, we have an infamous 'track day' where all you do for two and a half hours is run. Since I am not the fastest person, I typically fall into the back of the pack and Coach Holmes runs almost every drill with us and pushes us to meet the required time and stay on pace. To capture this picture, I made sure that it was being taken looking up at Coach, along with positioning him off-center of the frame to follow the rule of thirds. Camera Settings: ISO 100 70mm f/4.5 1/800sec",
