@@ -9,6 +9,7 @@ import "./styles/App.css";
 import "./assets/fonts/Vonique_64_Bold.ttf";
 import Thesis from "./pages/Thesis";
 import NotFound from "./pages/NotFound";
+import Presentation from "./pages/Presentation";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/thesis" element={<Thesis />} />
+          <Route path="/presentation" element={<Presentation />} />
           {/* 404 Route */}
           <Route path="*" element={<NotFound />} />
         </Routes>

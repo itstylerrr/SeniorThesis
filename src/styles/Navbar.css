@@ -1,115 +1,114 @@
 /* Navbar container */
 .navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
-  }
-  
-  /* Hamburger icon */
-  .hamburger {
-    width: 30px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1100;
-  }
-  
-  .hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #000;
-    border-radius: 2px;
-    transition: all 0.4s ease;
-  }
-  
-  /* Change to "X" when open */
-  .hamburger.open span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-    background-color: #4c3ce4;
-  }
-  
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.open span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-    background-color: #4c3ce4;
-  }
-  
-  /* Fullscreen menu overlay */
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: all 0.5s ease;
-    z-index: 1000;
-  }
-  
-  /* Show the menu */
-  .menu-overlay.open {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  
-  /* Logo container */
-  .menu-logo {
-    position: absolute;
-    top: 5%;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: all 0.5s ease;
-  }
-  
-  .menu-logo img {
-    max-width: 120px;
-    height: auto;
-  }
-  
-  /* Animate the logo */
-  .menu-logo.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Menu items */
-  .menu-items {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-items li {
-    margin: 1rem 0;
-  }
-  
-  .menu-items li a {
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    transition: color 0.3s ease;
-  }
-  
-  .menu-items li a:hover {
-    color: #4c3ce4;
-  }
-  
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+/* Hamburger icon */
+.hamburger {
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #4c3ce4;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Change to "X" when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  background-color: #4c3ce4;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  background-color: #4c3ce4;
+}
+
+/* Fullscreen menu overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+/* Show the menu */
+.menu-overlay.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Logo container */
+.menu-logo {
+  position: absolute;
+  top: 5%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+}
+
+.menu-logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Animate the logo */
+.menu-logo.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Menu items */
+.menu-items {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items li {
+  margin: 1rem 0;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.menu-items li a:hover {
+  color: #4c3ce4;
+}

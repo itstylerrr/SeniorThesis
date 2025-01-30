@@ -1,0 +1,97 @@
+/* Main Presentation Container */
+.presentation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.presentation-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darken effect */
+  backdrop-filter: blur(5px); /* Apply blur */
+  z-index: 0; /* Ensure it sits behind all content */
+}
+
+/* Image Section */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+.image-container img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Annotation Section */
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  max-height: 90vh; /* Limits text height */
+  overflow: auto; /* Allows scrolling if necessary */
+  text-align: left;
+  z-index: 1;
+}
+
+/* Section Title */
+.section-title {
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  font-family: "Vonique", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
+}
+
+/* Annotation Text */
+.annotation-text {
+  font-size: clamp(0.9rem, 1.2vw, 1.4rem);
+  line-height: 1.6;
+  max-height: 75vh;
+  overflow-y: auto;
+  text-align: justify;
+  padding-right: 10px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Darker shadow for contrast */
+}
+
+/* Hide scrollbar for a cleaner look */
+.annotation-text::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fade-in and Fade-out Transitions */
+.fade-transition {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
