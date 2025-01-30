@@ -34,6 +34,9 @@ const Navbar = () => {
             <a href="/thesis">Thesis</a>
           </li>
           <li onClick={toggleMenu}>
+            <a href="/presentation">Presentation</a>
+          </li>
+          <li onClick={toggleMenu}>
             <a href="/about">About</a>
           </li>
           <li onClick={toggleMenu}>
